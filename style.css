@@ -402,3 +402,42 @@ footer {
   font-weight: 700;
   font-size: 1rem;
 }
+
+.search-wrapper {
+  margin: 20px 0;
+}
+
+#menu-search {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+  font-family: "DM Sans", sans-serif;
+  outline: none;
+}
+
+#menu-search:focus {
+  border-color: #eee;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: #ff4d4d;
+  color: white;
+}

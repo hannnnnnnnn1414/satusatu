@@ -109,6 +109,9 @@
     <section id="pos-system" class="pos-container reveal">
       <div class="pos-header">
         <h2>Order Your Drink</h2>
+        <div class="search-wrapper">
+          <input type="text" id="menu-search" placeholder="Search menu..." />
+        </div>
         <div class="category-filter">
           <button class="filter-btn active" data-category="all">All</button>
           <button class="filter-btn" data-category="coffee">Coffee</button>
@@ -124,7 +127,10 @@
           <span id="item-count">0 Items</span>
           <span id="total-price">Rp 0</span>
         </div>
-        <button id="buy-button" class="btn-primary">Checkout via GoFood</button>
+        <div class="cart-actions">
+          <button id="clear-cart" class="btn-secondary">Clear</button>
+          <button id="buy-button" class="btn-primary">Checkout via WA</button>
+        </div>
       </div>
     </section>
 
