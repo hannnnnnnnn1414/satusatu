@@ -30,6 +30,13 @@ nav {
   backdrop-filter: blur(10px);
 }
 
+#spin-text {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+  color: var(--accent-color);
+  min-width: 120px;
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -440,4 +447,22 @@ footer {
 .btn-secondary:hover {
   background: #ff4d4d;
   color: white;
+}
+
+.menu-item-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-item-img {
+  transform: scale(1.05);
+}
+
+.menu-card {
+  overflow: hidden;
 }

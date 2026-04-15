@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             textElement.textContent = words[wordIndex];
             textElement.style.opacity = 1;
         }, 500);
-    }, 2000);
+    }, 3000);
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -33,11 +33,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const menuData = [
-        { id: 1, name: "Satu Kopi", category: "coffee", price: 25000, options: ["Vanilla", "Caramel", "Hazelnut"] },
-        { id: 2, name: "Cold Brew", category: "coffee", price: 28000, options: ["No Sugar", "Less Sugar", "Normal"] },
-        { id: 3, name: "Earl Grey Tea", category: "tea", price: 20000, options: ["Honey", "Lemon", "Lychee"] },
-        { id: 4, name: "Matcha Latte", category: "milk", price: 30000, options: ["Boba", "Jelly", "Extra Shot"] },
-        { id: 5, name: "Chocolate Signature", category: "milk", price: 27000, options: ["Marshmallow", "Whipped Cream"] }
+        {
+            id: 1,
+            name: "Satu Kopi",
+            category: "coffee",
+            price: 25000,
+            options: ["Vanilla", "Caramel", "Hazelnut"],
+            image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+            id: 2,
+            name: "Cold Brew",
+            category: "coffee",
+            price: 28000,
+            options: ["No Sugar", "Less Sugar", "Normal"],
+            image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+            id: 3,
+            name: "Earl Grey Tea",
+            category: "tea",
+            price: 20000,
+            options: ["Honey", "Lemon", "Lychee"],
+            image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+            id: 4,
+            name: "Matcha Latte",
+            category: "milk",
+            price: 30000,
+            options: ["Boba", "Jelly", "Extra Shot"],
+            image: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+            id: 5,
+            name: "Chocolate Signature",
+            category: "milk",
+            price: 27000,
+            options: ["Marshmallow", "Whipped Cream"],
+            image: "https://images.unsplash.com/photo-1534706936160-d5ee67737249?auto=format&fit=crop&w=600&q=80"
+        }
     ];
 
     let cart = JSON.parse(localStorage.getItem('satusatu_cart')) || [];
@@ -58,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement("div");
             card.className = "menu-card";
             card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="menu-item-img">
                 <h3>${item.name}</h3>
                 <span class="price">Rp ${item.price.toLocaleString()}</span>
                 <div class="options-group">
