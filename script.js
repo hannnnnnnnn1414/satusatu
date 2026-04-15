@@ -117,3 +117,19 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
 });
 
 document.addEventListener("DOMContentLoaded", () => renderMenu());
+
+document.getElementById("buy-button").addEventListener("click", () => {
+    if (cart.length === 0) return;
+
+    const phoneNumber = "6281234567890";
+    let message = "Halo Satu Satu, saya mau order:%0A";
+
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} (${item.selectedOpt})%0A`;
+    });
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    message += `%0ATotal: Rp ${total.toLocaleString()}`;
+
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+});
