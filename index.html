@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satu Satu — Kost, Laundry, & Kafe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">SATU<span>SATU</span></div>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content reveal">
+        <p class="tagline">More than just a place to stay.</p>
+        <h1>
+          <span id="spin-text">Living</span> <br />in <span>One Place.</span>
+        </h1>
+        <a href="#services" class="btn-primary">Explore Services</a>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="service-section reveal" id="kafe">
+        <div class="service-content">
+          <div class="service-info">
+            <span class="service-number">01</span>
+            <h2>Kafe</h2>
+            <p>
+              Tempat nyaman buat ngerjain tugas atau sekedar santai dengan kopi
+              pilihan. Atmosfer yang tenang mendukung produktivitas lo.
+            </p>
+          </div>
+          <div
+            class="service-image"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80&quot;);
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div class="service-section reveal" id="kost">
+        <div class="service-content reverse">
+          <div class="service-info">
+            <span class="service-number">02</span>
+            <h2>Kost</h2>
+            <p>
+              Hunian eksklusif dengan fasilitas lengkap. Keamanan 24 jam dan
+              lingkungan yang tenang bikin lo betah istirahat.
+            </p>
+          </div>
+          <div
+            class="service-image"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&w=1200&q=80&quot;);
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div class="service-section reveal" id="laundry">
+        <div class="service-content">
+          <div class="service-info">
+            <span class="service-number">03</span>
+            <h2>Laundry</h2>
+            <p>
+              Cuci bersih, wangi, dan cepat. Ga perlu pusing mikirin cucian
+              numpuk, serahkan semua ke tim profesional kami.
+            </p>
+          </div>
+          <div
+            class="service-image"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1200&q=80&quot;);
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container reveal">
+        <h2>Visit Us</h2>
+        <p>
+          Blok D4 no 11, Jl. Komp. Pelindo II, Cilincing, Kec. Cilincing, Jkt
+          Utara, Daerah Khusus Ibukota Jakarta 14120
+        </p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/kost.satusatu">Instagram</a>
+          <a href="#">WhatsApp</a>
+          <a href="https://maps.app.goo.gl/cSMP74jxzPnx77Xb6">Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pos-system" class="pos-container reveal">
+      <div class="pos-header">
+        <h2>Order Your Drink</h2>
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="coffee">Coffee</button>
+          <button class="filter-btn" data-category="tea">Tea</button>
+          <button class="filter-btn" data-category="milk">Milk Base</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-display"></div>
+
+      <div class="cart-summary" id="cart-summary">
+        <div class="cart-info">
+          <span id="item-count">0 Items</span>
+          <span id="total-price">Rp 0</span>
+        </div>
+        <button id="buy-button" class="btn-primary">Checkout via GoFood</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Satu Satu - Kost, Laundry & Kafe. Built for Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
